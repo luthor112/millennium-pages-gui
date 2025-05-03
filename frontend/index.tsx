@@ -1,7 +1,4 @@
-import { callable, findModule, Millennium } from "@steambrew/client";
-
-// Backend functions
-const install_plugin = callable<[{ plugin_url: string }], boolean>('Backend.install_plugin');
+import { Millennium } from "@steambrew/client";
 
 const WaitForElement = async (sel: string, parent = document) =>
 	[...(await Millennium.findElement(parent, sel))][0];

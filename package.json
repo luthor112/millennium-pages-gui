@@ -13,7 +13,7 @@
   "type": "module",
   "name": "millennium-pages-gui",
   "version": "1.0.0",
-  "description": "Simple plugin to integrate Theme and Plugin downloading into Steam",
+  "description": "Simple plugin to integrate the Themes and Plugins pages into Steam",
   "main": "./frontend/index.jsx",
   "author": "luthor112",
   "license": "MIT",

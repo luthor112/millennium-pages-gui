@@ -1,23 +1,6 @@
 import Millennium, PluginUtils # type: ignore
 logger = PluginUtils.Logger()
 
-###############
-# PLUGIN UTIL #
-###############
-
-def install_plugin_url(plugin_url):
-    pass
-
-##############
-# INTERFACES #
-##############
-
-class Backend:
-    @staticmethod
-    def install_plugin(plugin_url):
-        logger.log(f"install_plugin({plugin_url})")
-        return True
-
 class Plugin:
     def _front_end_loaded(self):
         logger.log("Frontend loaded")

@@ -3,6 +3,6 @@
 
     "name": "millennium-pages-gui",
     "common_name": "Millennium Pages Integration",
-    "description": "Simple plugin to integrate Theme and Plugin downloading into Steam",
+    "description": "Simple plugin to integrate the Themes and Plugins pages into Steam",
     "version": "1.0.0"
 }
