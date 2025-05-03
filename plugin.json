@@ -2,7 +2,7 @@
     "$schema": "https://raw.githubusercontent.com/SteamClientHomebrew/Millennium/main/src/sys/plugin-schema.json",
 
     "name": "millennium-pages-gui",
-    "common_name": "Millennium pages integration",
+    "common_name": "Millennium Pages Integration",
     "description": "Simple plugin to integrate Theme and Plugin downloading into Steam",
     "version": "1.0.0"
 }
