@@ -1,4 +1,4 @@
-import { Millennium } from "@steambrew/client";
+import { Millennium, sleep } from "@steambrew/client";
 
 const WaitForElement = async (sel: string, parent = document) =>
 	[...(await Millennium.findElement(parent, sel))][0];
@@ -8,10 +8,6 @@ const WaitForElementTimeout = async (sel: string, parent = document, timeOut = 1
 
 const WaitForElementList = async (sel: string, parent = document) =>
 	[...(await Millennium.findElement(parent, sel))];
-
-async function sleep(msec) {
-    return new Promise(resolve => setTimeout(resolve, msec));
-}
 
 async function OnPopupCreation(popup: any) {
     if (popup.m_strTitle === "Store Supernav") {
@@ -45,6 +41,12 @@ async function OnPopupCreation(popup: any) {
 
 export default async function PluginMain() {
     console.log("[millennium-pages-gui] Frontend startup");
+    while (
+        typeof g_PopupManager === 'undefined' ||
+        typeof MainWindowBrowserManager === 'undefined'
+    ) {
+        await sleep(100);
+    }
 
     g_PopupManager.m_mapPopups.data_.forEach(popup => {
         if (popup.value_.m_strTitle === "Store Supernav") {
