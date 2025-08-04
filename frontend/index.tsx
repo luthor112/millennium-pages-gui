@@ -41,12 +41,7 @@ async function OnPopupCreation(popup: any) {
 
 export default async function PluginMain() {
     console.log("[millennium-pages-gui] Frontend startup");
-    while (
-        typeof g_PopupManager === 'undefined' ||
-        typeof MainWindowBrowserManager === 'undefined'
-    ) {
-        await sleep(100);
-    }
+    await App.WaitForServicesInitialized();
 
     g_PopupManager.m_mapPopups.data_.forEach(popup => {
         if (popup.value_.m_strTitle === "Store Supernav") {
