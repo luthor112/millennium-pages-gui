@@ -55,6 +55,7 @@ async function pluginMain() {
 export default definePlugin(async () => {
     await pluginMain();
     return {
+        title: "Millennium Pages Integration",
 		icon: <IconsModule.Settings />,
 	};
 });
