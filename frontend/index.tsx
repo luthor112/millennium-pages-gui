@@ -1,4 +1,4 @@
-import { Millennium, sleep } from "@steambrew/client";
+import { Millennium, sleep, IconsModule, definePlugin } from "@steambrew/client";
 
 const WaitForElement = async (sel: string, parent = document) =>
 	[...(await Millennium.findElement(parent, sel))][0];
@@ -39,7 +39,7 @@ async function OnPopupCreation(popup: any) {
     }
 }
 
-export default async function PluginMain() {
+async function pluginMain() {
     console.log("[millennium-pages-gui] Frontend startup");
     await App.WaitForServicesInitialized();
 
@@ -51,3 +51,10 @@ export default async function PluginMain() {
 
 	g_PopupManager.AddPopupCreatedCallback(OnPopupCreation);
 }
+
+export default definePlugin(async () => {
+    await pluginMain();
+    return {
+		icon: <IconsModule.Settings />,
+	};
+});

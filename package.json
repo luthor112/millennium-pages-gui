@@ -12,16 +12,16 @@
   },
   "type": "module",
   "name": "millennium-pages-gui",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Simple plugin to integrate the Themes and Plugins pages into Steam",
   "main": "./frontend/index.jsx",
   "author": "luthor112",
   "license": "MIT",
   "dependencies": {
-    "@steambrew/api": "^4.2.2",
-    "@steambrew/client": "^4.2.1",
-    "@steambrew/ttc": "^2.7.3",
-    "@steambrew/webkit": "^4.2.1",
+    "@steambrew/api": "^5.8.4",
+    "@steambrew/client": "^5.8.4",
+    "@steambrew/ttc": "^2.8.7",
+    "@steambrew/webkit": "^5.8.4",
     "preact": "^10.25.0"
   }
 }

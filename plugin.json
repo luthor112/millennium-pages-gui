@@ -4,5 +4,6 @@
     "name": "millennium-pages-gui",
     "common_name": "Millennium Pages Integration",
     "description": "Simple plugin to integrate the Themes and Plugins pages into Steam",
-    "version": "1.0.1"
+    "version": "2.0.0",
+    "backendType": "lua"
 }
