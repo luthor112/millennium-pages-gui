@@ -14,7 +14,6 @@ jobs:
         with:
           node-version: '22'
       - run: npm install -g pnpm
-      - run: pnpm approve-builds --all
       - run: pnpm install
       - run: pnpm run dev
       - uses: thedoctor0/zip-release@0.7.6
